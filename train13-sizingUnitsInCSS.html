@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sizing units in CSS</title>
+  <style>
+    html {
+      /* html is a root element of the document so the settings applied in the html will applied to every element as default*/
+      font-size: 12px;
+      /* this will set the base font size for the entire document */
+    }
+
+
+    .pxbox {
+      font-size: 2rem;
+      /* rem = relative to the font-size of the root element, here it will be 2 times the base font size set in html, so it will be 24px */
+      border: 2px solid black;
+      width: 80vw;
+      /* vw = Viewport width: this box will take 100% of the viewport width, mean it will automatically fit in the width of the device*/
+      height: 10vh;
+      /* vh = Viewport height: this box will take 10% of the viewport height */
+      box-sizing: border-box;
+      margin: 2vw auto;
+      background-color: aquamarine;
+    }
+
+    .container {
+      border: 2px solid black;
+      width: 80vw;
+      margin: 23px auto;
+      /* here the 23px is margin from top and auto is the margin from left and right */
+      height: 80vh;
+      /* this will take 80% of the viewport height */
+      box-sizing: border-box;
+      background-color: aquamarine;
+    }
+
+    .container p {
+      font-size: 2em;
+      /* em = relative to the font-size of the element, here paragraph tag will inherit the font size from the container class, and 2em doubles the font size so it will appears 2x larger than the container class*/
+    }
+
+    .myfont {
+      color: yellow;
+      border: 2px solid black;
+      background-color: red;
+      width: 50vmin;
+      /* vmin = Viewport minimum: this will take the minimum of viewport width and height, so it will be responsive to both dimensions */
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pxbox">This is a box with px sizing unit</div>
+  <div class="container">
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati veritatis reprehenderit voluptatum vel labore!
+      Minima ullam quae suscipit modi nobis.
+    </p>
+  </div>
+
+  <div class="myfont">
+    This is the div to understand the vmin and vmax units.
+  </div>
+</body>
+
+</html>
+
+
+<!--  
+      vh (viewport height): 1vh is 1% of the height of the 
+browser window.
+      vw (viewport width): 1vw is 1% of the width of the browser window.
+vmin and vmax are related to these:
+
+      vmin: 1vmin is 1% of the smaller value between the viewport’s width and height.
+  Example: If your window is 1000px wide and 800px tall, 1vmin = 8px (1% of 800px).
+      vmax: 1vmax is 1% of the larger value between the viewport’s width and height.
+  Example: If your window is 1000px wide and 800px tall, 1vmax = 10px (1% of 1000px).
+-->

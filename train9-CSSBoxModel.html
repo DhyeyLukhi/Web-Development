@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        }
+         */
+        
+        .box{
+            background-color: aquamarine;
+        }
+
+        .box1{
+            color: yellow;
+            padding: 10px;
+            margin: 35px;
+            border: 2px solid black;
+            height: 100px;
+            box-sizing: border-box;
+
+            /* box-sizing: border-box, is used to include padding and border in the element's total width and height.
+            If we didn't put this, then the total height/width given in the CSS is assign to the content.
+            While adding box-sizing: border-box, assign the total height/width to the content, padding and border.
+             */
+        }
+
+        .box2{
+            color: red;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            height: 100px;
+            box-sizing: border-box;
+        }
+
+        /* There is a concept of margin collapse in CSS.
+        When two margins meet, they overlap into a single margin that is larger among the two margins.
+        In this case, the margins are 25px and 35px, so the larger one is 35px, so we can see the margin of only 35 px where the two boxes meet.
+        */
+    </style>
+</head>
+<body>
+    <div class="box box1">This is the first box</div>
+    <div class="box box2">This is the second box</div>
+</body>
+</html>

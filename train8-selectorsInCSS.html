@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <style>
+        /* Class Selector: */
+        .backchange {
+            background-color: black;
+            color: white;
+        }
+
+        /* id Selector: */
+        #fontchange {
+            color: red;
+        }
+
+        /*child selector: */
+        div>p {
+            color: blue;
+            background-color: rgb(179, 179, 39);
+        }
+        /* Descendant selector: */
+        div p {
+            color: blue;
+        }
+
+        /* attribute selector: */
+        [data-x="a"] {
+            color: rgb(221, 10, 221);
+        }
+
+        /* universal selector */
+        *{
+            color: cyan;
+        }
+
+        /* Pseudo selector: used in links and anchor tags*/
+        a:visited{
+            
+            color: green
+            /* link colour changes after visited */
+        }
+        a:link{
+            color: purple;
+            /* link color before visited */
+        }
+        a:hover {
+            background-color: orange;
+            /* link color changes on mouse hover */
+        }
+
+        p:first-child{
+            color:rgb(0, 255, 55);
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="one">
+        <p>This is the first child in class one of main tag</p>
+        <p>This is the second child in class one of main tag</p>
+        <p data-x="a">This is the 3rd child of class one with attribute x and value "a"</p>
+    </main>
+    <div class="backchange">
+        This is the first div
+        <p>This is the paragraph inside the first div</p>
+    </div>
+
+    <div id="fontchange">
+        This is the second div
+    </div>
+    <a target="_blank" href="https://www.google.com">Here is Google</a>
+    <a target="_blank" href="https://www.apple.com">Here is apple</a>
+</body>
+
+</html>
+
+<!-- The difference between the child selector and the descendant selector is that the child selector only applies styles to direct children of an element.
+while the descendant selector applies styles, not only to direct children but also to all nested elements within the specified parent element. -->

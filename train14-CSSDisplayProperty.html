@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0
+        }
+        .box{
+            border: 2px solid blue;
+            /* display: inline;    now the div behaves like an inline element */
+            display: inline-block;   /*now the div behaves like an inline element but this time it allows margin, padding and width to set */
+            margin: 40px;
+            padding: 40px;
+        }
+
+        .box1{
+            display: none;   
+            /* in the none display, it completely removes the element and allow other elements to take space in the removed element. */
+            visibility: hidden;
+            /* in the visibility hidden, the element is removed, but the space the element was containing isn't removed, means other element remains on their position, and only affected elements blows up from the display */
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        I am a box
+    </div>
+    <div class="box">
+        I am another box
+        </div>
+    <span>This is a</span>
+    <span>checking of inline element</span>
+</body>
+</html>
+
+
+<!--
+In the display: inline;  the div behaves like inline element but you cannot set margin, padding from the top side and cannot expand the width of the div element
+
+In the display: inline-block;   the div works same as the inline element but you can now add the margin, padding and set the custom width-->

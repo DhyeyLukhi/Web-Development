@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts, Texts and Color properties</title>
+    <style>
+        /* by using the import statements, we can import the font from the other sites, import statement can import more than one fonts in one statement, as i have presented here*/
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Cutive+Mono&display=swap');
+
+        h1 {
+            text-align: center;
+            font-family: "Cutive Mono", monospace;
+            /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+            font-size: 50px;
+        }
+
+        p {
+            font-family: "Bitcount Grid Double", monospace;
+            font-style: italic;
+            font-weight: 500; /*used to make the text bold*/
+            font-size: 30px;
+        }
+        .p2{
+            text-decoration: underline; /*used to decorate the text*/
+            text-decoration-color: green; /*used to change the color of text decoration*/
+            text-decoration-style:dotted; /*used to change the style of text decoration*/
+            text-decoration-thickness: 7px; /*used to change the thickness of the text decoration*/
+            text-transform: capitalize;  /*used to make the first letter of each word capitalized*/
+        }
+
+        .p3{
+            width: 40px;
+            text-overflow: ellipsis; /*used to decide how the text should be displayed when it overflows the container*/
+            overflow: hidden; /*used to decide the appearance of text when it overflows the container*/
+            margin: 10px;
+            border: 3px solid red;
+        }
+
+        .p4{
+            width:50px;
+            margin: 10px;
+            border: 3px solid aquamarine;
+            word-break: break-all; /* used to break the words when it overflows the container */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Fonts</h1>
+    <p>Here is the example for the different fonts</p>
+    <div class="p2">This is the example for the text decoration</div>
+    <div class="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, similique dolor sunt in eligendi recusandae inventore totam cumque pariatur necessitatibus nihil distinctio alias. Cupiditate doloremque libero beatae ea earum deleniti!</div>
+    <div class="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero veniam suscipit, voluptate eligendi inventore ex. Quibusdam quos porro iure nostrum aperiam reprehenderit placeat sapiente et deleniti. Cupiditate, nam asperiores.</div>
+</body>
+
+</html>

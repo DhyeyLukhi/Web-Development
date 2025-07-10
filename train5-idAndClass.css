@@ -1,0 +1,12 @@
+.classfirst{
+    color: green;
+    background-color:burlywood ;
+}
+
+#firstid{
+    color:crimson;
+    background-color: cadetblue;
+}
+/* 
+".classfirst" represent the class with the name "classfirst", the "." in the starting define the class in css
+"#firstid" represent the id with the name "firstid", the "#" in the starting define the id in the css */

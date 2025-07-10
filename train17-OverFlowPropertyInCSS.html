@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Property in CSS</title>
+    <style>
+        .box{
+            width: 20vw;
+            height: 20vh;
+            border: 2px solid black;
+            overflow: scroll;
+            /* white-space: nowrap; Prevents text from wrapping to the next line */
+            /* text-overflow: ellipsis; Adds ellipsis (...) for overflowed text */
+
+            overflow-x: hidden; /* Hides horizontal overflow */
+            overflow-y: scroll; /* Adds a vertical scrollbar if content overflows */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore, odio consectetur esse quos dicta ducimus rem unde voluptatibus repellat. Accusamus, ipsam. Amet incidunt officia earum possimus suscipit, tempore maiores consectetur omnis id neque voluptatum a architecto? Vero odio deleniti voluptatum a, molestias, aperiam fugit libero officia ducimus iusto eius?
+    </div>
+</body>
+</html>

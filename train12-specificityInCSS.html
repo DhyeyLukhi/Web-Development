@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity in CSS</title>
+    <style>
+        h1{
+            color: green;
+        }
+        .cyellow {
+            color: yellow;
+        }
+        .cred {
+            color: red;
+        }
+        .cpurple {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="cyellow cred cpurple">This is the exmaple to learn the specificity in CSS</h1>
+</body>
+</html>
+
+<!-- order of importance in CSS
+Inline CSS > ID selector > Class or Attribute selector > Element selector > Universal selector
+
+if the same element has multiple styles applied, the one with the highest specificity will take precedence.
+if the specificity is the same, the last one defined in the CSS will be applied.
+
+if you add !important to a style, it will override all other styles, even the inline styles too.
+
+To calculate the sepcificity(importance) of a selector, here is the formula:
+1. !important: 10,000 points
+2. Inline CSS: 1000 points
+3. ID selector: 100 points
+4. Class selector, attribute selector, and pseudo-classes(the one we writes after ':'): 10 points
+5. Element selector and pseudo-elements: 1 point each
+6. Universal selector: 0 points
+
+in the complex selectors, add the points for each part of the selector to get the total specificity score. (like in the h1.classSelector add the points of h1 and classSelector to get the total specificity score)
+-->
