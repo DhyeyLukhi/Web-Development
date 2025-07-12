@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in CSS</title>
+    <style>
+
+        :root{
+            --color: #e44d4d;  /* declaration of a global variable */
+            --secondary-color: #393;
+            --default-padding: 10px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .navbar {
+            --color: rgb(15, 197, 136);  /* now color is a local variable, and it will be proiritised over the global */
+            background-color: var(--color);
+            color: white;
+            padding: 10px;
+        }
+        ul{
+
+            display: flex;
+        }
+
+        ul li{
+            list-style: none;
+            padding: var(--default-padding);
+            background-color: var(--colornavbar, blue); /* if the variable is not defined, it will take the default value blue */
+
+        }
+        .content{
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam vitae assumenda, consequuntur natus, amet maxime possimus quis velit quo ducimus rerum a officiis numquam eos nostrum voluptas? Dolores est consequatur, tenetur harum ad quibusdam? Deleniti architecto maiores voluptatem! Doloribus laboriosam nisi libero aut, cum quam placeat maiores? Laboriosam, animi molestias.
+    </div>
+</body>
+</html>
