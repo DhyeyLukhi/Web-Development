@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More about Selectors in CSS </title>
+</head>
+<style>
+    /* .box:first-child{
+            background-color: red;
+        } */
+
+        /* .box::first-line{
+            color: yellow;
+        } */
+
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+        p, a, .box, [data-color="primary"]{  
+                        This will select all p, a, .box and elements with data-color="primary" 
+            padding-top: 45px;
+        } */
+
+        /* .box:nth-child(odd){
+                        You can select the odd and even elements using nth-child selector
+            background-color: blue;
+        } */
+
+        /* .box:nth-last-child(2){
+                        This will select the second last element
+            background-color: red;
+        } */
+
+
+    .boxes *{
+        color: green;
+    }
+
+    .boxes::before{
+        content: "This is the content added dynaically before the boxes class.";
+        color: red;
+    }
+
+    /* boxes:before and boxes:after are used to dynamically add content through CSS before/after the element. these are pseudo elements, not the pseudo selectors*/
+
+    .boxes::after{
+        content: "This is the content added dynaically after the boxes class.";
+        color: blue;
+    }
+
+    ::selection{  /*Used to change the style of web page when user selects text  */
+        background-color: yellow;
+        color: black;
+    }
+
+    .boxes::first-letter{
+        font-size: 2em;
+        color: orange;
+    }
+    .input::placeholder{
+        color: rgb(255, 0, 0);
+        font-style: italic;
+    }
+</style>
+<body>
+    <div class="boxes">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta iusto praesentium molestias vitae, eum quam ducimus! Quos inventore, voluptates assumenda laudantium quasi odio labore veniam qui cum nisi ratione nemo, tenetur eaque debitis eius impedit laboriosam temporibus totam asperiores consequatur excepturi enim adipisci sapiente explicabo. Saepe voluptatibus quod corrupti. </div>
+        <div class="box">Here is a box</div>
+        <div class="box">Here is a box</div>
+
+        <input type="text" placeholder="Type something here...">
+    </div>
+</body>
+</html>

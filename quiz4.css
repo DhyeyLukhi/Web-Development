@@ -1,0 +1,27 @@
+:root{
+    --first_color: black;
+    --second_color: white;
+    --third_color: #88c1e7;
+    --fourth_color: rgb(127, 255, 212);
+}
+
+*{
+    margin: 3px 5px 0px 5px;
+    padding: 0px;
+}
+
+.navbar {
+    background-color: var(--third_color);
+    height: 50px;
+    width: 100%;
+    position: static;
+}
+
+.navbar .navbar_ele {
+    background-color: var(--fourth_color);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+    top: 10px;
+}

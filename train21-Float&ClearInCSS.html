@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear in CSS</title>
+    <style>
+        
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+        }
+
+        img{
+            float: left; 
+            /* It will allow the other content to appear right after the image, instead of below the image. */
+        }
+
+        .card{
+            border: 2px solid red;
+        }
+
+        .card2{
+            clear: right;
+            /* It will clear the float, meaning it will not allow any floated elements to its left. */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="image.png" alt="an image">
+        <div class="card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium repellat sequi culpa dolorem aliquam cumque commodi consectetur ad doloribus non. Perspiciatis expedita iusto veritatis blanditiis explicabo, repudiandae velit debitis omnis atque voluptatibus libero eligendi hic incidunt. Debitis, beatae amet sed quis cupiditate hic? Alias itaque quia ipsam modi dolorum libero, expedita inventore. Incidunt harum unde neque. Eaque nihil corporis, doloribus ipsa odio voluptas beatae ut, nisi ex dolore vel, fuga atque facilis perferendis dolor deserunt mollitia magnam. Vitae blanditiis qui nobis quasi doloribus laboriosam nisi at fugit delectus expedita? Eum illo sunt vero nemo dolorum dolor tempore nam voluptate aspernatur.</div>
+    </div>
+
+
+    <div class="cards2">
+        <img src="image.png" alt="an image here 2">
+        <div class="card2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vero praesentium id rem exercitationem, quis earum quas itaque cupiditate ullam, placeat, architecto incidunt. Ipsum repudiandae dolor vero nisi aspernatur doloribus exercitationem maiores nam veniam nulla? Velit ipsum quod assumenda, nemo magnam, cumque obcaecati repudiandae illum dolore sunt, minima pariatur soluta sint tenetur! Cumque nam magnam eum itaque, consequatur illum? Nihil amet magni repudiandae sunt voluptatibus fugit qui ullam! Facere nobis voluptates illum. Quidem, suscipit? Itaque voluptas qui dolores in eaque debitis quidem, facere quibusdam quasi? Laudantium ipsa ducimus officia eos praesentium, ratione, delectus adipisci magni nostrum explicabo, veniam accusamus quis.</div>
+    </div>
+</body>
+</html>
