@@ -1,0 +1,63 @@
+.navbar{
+    background-color: aquamarine;
+    padding: 2px;
+    margin: -8px;
+    position: sticky;
+    top: 0;
+}
+
+ul li{
+    display: inline-block;
+    padding-left: 50px;
+}
+
+.box-on-left {
+    background-color: lightblue;
+    width: 40vw;
+    padding-left: 5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 2vh;
+    height: 80vh;
+    display: inline-block;
+    border: 1px solid black;
+
+}
+
+.box-on-right{
+    background-color: rgb(182, 157, 247);
+    width: 40vw;
+    padding-right: 5vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    height: 80vh;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.welcome-box{
+    text-align: center;
+    border: 2px solid black;
+    width: 1087px;
+    height: 50vh;
+    align-content: center;
+    font-size: 40px;
+    margin: 26px;
+    padding: 100px;
+
+
+    font-family: monospace;
+    background-color: cadetblue;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px black;
+}
