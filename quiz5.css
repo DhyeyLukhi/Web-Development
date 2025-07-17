@@ -53,6 +53,15 @@ ul li{
     text-shadow: 1px 1px 2px black;
 }
 
+img{
+    width: 10vw;
+    height: 10vw;
+    margin-left: 87vw;
+    position: fixed;
+    top: 77vh;
+
+}
+
 h2{
     color: white;
     text-align: center;

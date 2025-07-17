@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox in CSS (Masterclass)</title>
+    <style>
+        .container{
+            border: 2px solid rgb(0, 255, 0);
+            height: 80vh;
+            display: flex;  /* Enable Flexbox */
+
+            flex-wrap: wrap;  
+            /* Allow items to wrap onto multiple lines */
+
+
+            gap: 30px;
+            /* Space between items */
+            row-gap: 30px;
+            /* Space between rows */
+            column-gap: 30px;
+            /* Space between columns */
+
+            /* justify-content: center; */
+            /* Center items horizontally on the main axis */
+            
+
+            /* align-items: center;  */
+            /* Center items vertically on the cross axis */
+
+
+            /* align-content: center; */
+            /* Center the multiple lines of items in the container in cross axis */
+
+
+            /* flex-direction: column;  */
+            /* Stack items vertically */
+
+
+            flex-flow: row wrap;
+            /* A shorthand for flex-direction and flex-wrap, here it sets items to flow in a row and wrap onto the next line if necessary */
+
+
+
+
+
+            /* the items are lying either horizontally or vertically based on the flex-direction property, if the items are horizontal(X- axis) then the main axis is horizontal(X-axis) and the cross axis is vertical(Y-axis), if the items are vertical then the main axis is vertical(Y-axis) and the cross axis is horizontal(X-axis). */
+        }
+
+
+        .items{
+            width: 32px;
+            height: 32px;
+            background-color: rgb(252, 129, 129);
+            border: 2px solid rgb(5, 0, 0);
+            margin: 4px;
+
+            .order-1 {
+                order: 1;
+            }  /* orders the items in the flex container */
+            .order-2 {
+                order: 2;
+            }
+            .order-3 {
+                order: 3;
+            }
+        }
+
+        .itemsofc2{
+            width: 32px;
+            height: 32px;
+            background-color: rgb(129, 252, 129);
+            border: 2px solid rgb(0, 5, 0);
+            margin: 4px;
+            flex-grow: 1;
+            /* Allows the item to grow and fill available space in the flex container
+            Increase the number and items will contains more space as well */
+
+            flex-shrink: 2;
+            /* Allows the item to shrink if necessary */
+        }
+
+        .flexend {
+            align-self: flex-end;
+            /* Aligns this item to the end of the cross axis */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items">5552</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+    
+        <div class="container">
+
+            <div class="itemsofc2"></div>
+            <div class="itemsofc2"></div>
+            <div class="itemsofc2"></div>
+            <div class="itemsofc2"></div>
+            <div class="itemsofc2"></div>
+            <div class="itemsofc2"></div>
+            <div class="itemsofc2 flexend">flex end</div>
+            <div class="itemsofc2"></div>
+            <div class="itemsofc2"></div>
+        </div>
+    </main>
+</body>
+</html>
