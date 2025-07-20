@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid in CSS</title>
+    <style>
+        .container{
+            border: 2px solid rgb(255, 0, 0);
+            display: grid;
+            grid-template-columns: [pehle-wali] 100px [doosare-wali] 100px [teersare-wali] 100px;
+            grid-template-rows: [pehli-wali] 100px [doosri-wali] 100px [teesri-wali] 100px;
+
+            grid-template-areas: "nav nav nav"
+                                 "content-left content-center content-right";
+            
+
+        }
+        .item{
+            border: 2px solid blue;
+            /* height: 50px; */
+            /* width: 50px; */
+        }
+
+        .item-4{
+            grid-area: nav;
+            /* here the area is nav, so item-4 will take the all space which is defined for nav */
+        }
+        .item-1{
+            grid-area: content-right;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
