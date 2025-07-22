@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid in CSS</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: [pehle-wali] 100px [doosare-wali] 100px;
+            /* "pehle-wali" and "doosare-wali" are named grid lines */
+            /* Defines two columns, each 100px wide */
+
+            grid-template-rows: [pehli-wali] 100px [doosri-wali] 100px;
+            /* "pehli-wali" and "doosri-wali" are named grid lines */
+            /* Defines two rows, each 100px tall */
+
+        }
+        .item{
+            border: 2px solid blue;
+            height: 50px;
+            width: 50px;
+        }
+
+        .item-4{
+            grid-row: 1/2;
+            /* Place the item in the first row, spanning from line 1 to line 2 */
+            
+            
+            /* grid-row: pehle-wali/ doosare-wali;*/
+            /* This is another way to specify the row using named lines */
+
+            grid-column: 1/2;
+            /* Place the item in the first column, spanning from line 1 to line 2 */
+        }
+        .item-1{
+            grid-row: 1/2;
+            /* Place the item in the first row, spanning from line 1 to line 2 */
+
+            grid-column: 1/2;
+            /* Place the item in the first column, spanning from line 1 to line 2 */
+
+
+            /* now the 4 is already at the first place, so it will overlap with the 1 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
