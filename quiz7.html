@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+    <style>
+        :root{
+            --back-grid-color: rgb(236, 249, 250);
+        }
+
+        @media only screen and (max-width: 500px) {
+            body{
+
+                .navbar{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 50px 50px;
+                    place-content: center; 
+                }
+
+                .options{
+                    display: none;
+                }
+
+                .company > img{
+                    grid-area: 2/1;
+                    /* width: 300px;
+                    height: 100px; */
+                }
+
+
+                .contentpage{
+                    display: flex;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(7, 1fr);
+                    justify-content: center;
+    
+                }
+            
+
+                .language1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                background-color: var(--back-grid-color);
+                border-radius: 10px;
+                padding: 10px;
+                margin: 10px;
+                width: 90vw;
+                }
+    
+
+                .language2{
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    background-color: var(--back-grid-color);
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin: 10px;
+                }
+        
+
+                .language3{
+                    grid-column: 1/2;
+                    grid-row: 3/4;
+                    background-color: var(--back-grid-color);
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin: 10px;
+                }
+    
+
+                .language4{
+                    grid-column: 1/2;
+                    grid-row: 4/5;
+                    background-color: var(--back-grid-color);
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin: 10px;
+                }
+    
+
+                .language5{
+                    grid-column: 1/2;
+                    grid-row: 5/6;
+                    background-color: var(--back-grid-color);
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin: 10px;
+                }
+    
+
+                .language6{
+                    grid-column: 1/2;
+                    grid-row: 6/7;
+                    background-color: var(--back-grid-color);
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin: 10px;
+                }
+    
+
+                .language7{
+                    grid-column: 1/2;
+                    grid-row: 7/8;
+                    background-color: var(--back-grid-color);
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin: 10px; 
+            }
+
+            }
+
+        }
+
+        
+        .navbar{
+            display: flex;
+            position: sticky;
+            justify-content: center;
+
+        }
+        img{
+            width: 20vw;
+            height: auto;
+            margin-left: 3vw;
+        }
+
+        .lists{
+            margin-left: 100px;
+            margin-top: 30px;
+
+        }
+        .dropdown-icons{
+            width: 20px;
+            margin-left: 5px;
+            margin-top: 33px;
+            height: 20px;
+        }
+
+        .contentpage{
+            display: flex;
+            display: grid;
+            grid-template-columns: [first-col] 1fr [second-col] 1fr [third-col] 1fr;
+            grid-template-rows: [first-row] 1 fr [second-row] 1fr [third-row] 1fr;
+            justify-content: center;
+            padding-left: 175px;
+            padding-right: 175px;
+        }
+        
+        
+        .language1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: var(--back-grid-color);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .language2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            background-color: var(--back-grid-color);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .language3{
+            grid-column: 3/4;
+            grid-row: 1/2;
+            background-color: var(--back-grid-color);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .language4{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            background-color: var(--back-grid-color);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .language5{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            background-color: var(--back-grid-color);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .language6{
+            grid-column: 3/4;
+            grid-row: 2/3;
+            background-color: var(--back-grid-color);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .language7{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            background-color: var(--back-grid-color);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        a{
+            background-color: rgb(93, 93, 185);
+            text-decoration: none;
+            border: 2px solid rgb(93, 93, 185);
+            color: white;
+            border-radius: 8px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="company">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png" alt="UltraEdit Logo">
+        </div>
+
+        <div class="options navbar">
+            <div class="lists products">Products</div>
+            <img class="dropdown-icons products" src="https://imgs.search.brave.com/o7kwlMPMUhMhabpBshANy5khkEmhh-FOTk5KVV3_tNk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pY29u/LWxpYnJhcnkuY29t/L2ltYWdlcy9kcm9w/ZG93bi1pY29uLXBu/Zy9kcm9wZG93bi1p/Y29uLXBuZy0yMC5q/cGc" alt="dropdown">
+            
+
+            <div class="lists resources">Resources</div>
+            <img class="dropdown-icons resources" src="https://imgs.search.brave.com/o7kwlMPMUhMhabpBshANy5khkEmhh-FOTk5KVV3_tNk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pY29u/LWxpYnJhcnkuY29t/L2ltYWdlcy9kcm9w/ZG93bi1pY29uLXBu/Zy9kcm9wZG93bi1p/Y29uLXBuZy0yMC5q/cGc" alt="dropdown">
+
+
+            <div class="lists pricing">Pricing</div>
+            <img class="dropdown-icons pricing" src="https://imgs.search.brave.com/o7kwlMPMUhMhabpBshANy5khkEmhh-FOTk5KVV3_tNk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pY29u/LWxpYnJhcnkuY29t/L2ltYWdlcy9kcm9w/ZG93bi1pY29uLXBu/Zy9kcm9wZG93bi1p/Y29uLXBuZy0yMC5q/cGc" alt="dropdown">
+            
+            <div class="lists aboutus">About us</div>
+            <img class="dropdown-icons aboutus  " src="https://imgs.search.brave.com/o7kwlMPMUhMhabpBshANy5khkEmhh-FOTk5KVV3_tNk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pY29u/LWxpYnJhcnkuY29t/L2ltYWdlcy9kcm9w/ZG93bi1pY29uLXBu/Zy9kcm9wZG93bi1p/Y29uLXBuZy0yMC5q/cGc" alt="dropdown">
+
+        </div>
+    </div>
+    <div class="contentpage">
+        <div class="language1">
+            <center>
+                <h3>Language 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, repellendus!</p>
+                <a href="/Web Dev Training/Downloads/uex_23.0.0.21_amd64.deb">Download</a>
+            </center>
+        </div>
+        
+        <div class="language2">
+            <center>
+                <h3>Language 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, repellendus!</p>
+                <a href="/Web Dev Training/Downloads/uex_23.0.0.21_amd64.deb">Download</a>
+
+            </center>
+        </div>
+        
+        <div class="language3">
+            <center>
+                <h3>Language 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, repellendus!</p>
+                <a href="/Web Dev Training/Downloads/uex_23.0.0.21_amd64.deb">Download</a>
+
+            </center>
+        </div>
+
+        <div class="language4">
+            <center>
+                <h3>Language 4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, repellendus!</p>
+                <a href="/Web Dev Training/Downloads/uex_23.0.0.21_amd64.deb">Download</a>
+
+            </center>
+        </div>
+        
+        <div class="language5">
+            <center>
+                <h3>Language 5</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, repellendus!</p>
+                <a href="/Web Dev Training/Downloads/uex_23.0.0.21_amd64.deb">Download</a>
+
+            </center>
+        </div>
+        
+        <div class="language6">
+            <center>
+                <h3>Language 6</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, repellendus!</p>
+                <a href="/Web Dev Training/Downloads/uex_23.0.0.21_amd64.deb">Download</a>
+
+            </center>
+        </div>
+
+        <div class="language7">
+            <center>
+                <h3>Language 7</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, repellendus!</p>
+                <a href="/Web Dev Training/Downloads/uex_23.0.0.21_amd64.deb">Download</a>
+
+            </center>
+        </div>
+
+    </div>
+</body>
+</html>
