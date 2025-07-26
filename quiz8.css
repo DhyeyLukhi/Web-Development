@@ -8,22 +8,34 @@
     height: 50px;
     background-color: aquamarine;
     border-radius: 70px;
-    animation: bounceOnY 2s cubic-bezier(.23,1,.32,1) infinite alternate-reverse;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: rollOnX 3s linear infinite, bounceOnY 1s ease-in-out infinite alternate;
     /* transform: translateY(200%); */
-    
-    
-
 
 }
 
 @keyframes bounceOnY {
     from{
-        transform: translate(0%, 900%);
+        bottom: 0;
         
     }
     to{
-        transform: translate(800%, 200%);
+        bottom: 100%;
     }
     
     
 }
+@keyframes rollOnX {
+    from{
+        left: 0;
+        
+    }
+    to{
+        left: 100%;
+    }
+    
+    
+}
+
