@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations in class</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            width: 40vw;
+            height: 50vh;
+        }
+
+        .box{
+            width: 40px;
+            height: 50px;
+            background-color: rgb(61, 112, 112);
+
+
+
+            /* animation-name: myanimationname; */
+            /* name of the animation, which will run */
+
+
+            /* animation-duration: 3s; */
+            /* delay in the start of animation */
+
+
+            /* animation-iteration-count: 1; */
+            /* animation will repeat itself for 3 times */
+
+
+            /* animation-direction: alternate-reverse; */
+            /* used to reverse the animation when it ends */
+
+            /* animation-play-state: running; */
+            /* animation-play-state: paused; */
+            /* these both are used when element's animation have to pause/resume*/
+
+
+            /* animation-fill-mode: forwards; */
+            /* it will not reset the animation and keep the last stat of animation as it is, so element will not take it's animation's starting stat and position and will be at end position and stat when animations ends */
+
+
+            animation: mysecondaniimation 5s ease-in-out 0s infinite alternate-reverse, myanimationname 5s ease-in-out 0s infinite alternate-reverse;
+            /* use this when have to use multiple animations in "single line" */
+        }
+
+        @keyframes myanimationname {
+            from{
+                background-color: red;
+            }   
+            to{
+                transform: translate(100vw);
+                background-color: yellow;
+            }         
+        }
+        @keyframes mysecondaniimation{
+            0%{
+                transform: rotate(40deg);
+            }
+            20%{
+                transform: rotate(80deg);
+            }
+            40%{
+                transform: rotate(120deg);
+            }
+            60%{
+                transform: rotate(160deg);
+            }
+            80%{
+                transform: rotate(200deg);
+            }
+            100%{
+                transform: rotate(240deg);
+                
+            }
+        } 
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
