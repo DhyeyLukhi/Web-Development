@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit and Object Cover in CSS</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            background-color: aquamarine;
+
+
+            background-image: url("https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=pexels-pixabay-326055.jpg&fm=jpg");
+            /* now the image is a background image for the container instead of an element
+            */
+            
+        }
+        img{
+            width: 400px;
+            height: 400px;
+
+
+            /* object-fit: cover; */
+            /* object-fit: cover used to fit the image in a width and height, such that, it's aspect ratio didn't changes and image remains clear to viewer
+            Here in the image tag, the given height and width is followed by the object-fit, it didn't look for parent's width and height, it will follow the tag's width and height, and fit itself in it
+            */
+
+
+            /* object-position: top right; */
+            /* object-position: top right is used when you want object-fit: cover but you don't want to cut an important part of the image
+            */
+
+
+            object-fit: contain;
+            /* object-fit: cover will crop the image, to main the aspect ratio and fill image in the space, while obejct-fit: contain will show the full image but it may not fill the space
+            */
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=pexels-pixabay-326055.jpg&fm=jpg" alt=""> -->
+
+    </div>
+</body>
+</html>
