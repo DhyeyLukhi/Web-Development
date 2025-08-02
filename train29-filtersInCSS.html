@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters in CSS</title>
+    <style>
+        img{
+            /* filter: blur(10px); */
+            /* blurs the image about 10px */
+        }
+        .img1{
+            filter: brightness(150%) contrast(1.5);
+        }
+        .img3{
+            filter: grayscale(50%);
+
+
+            /* makes iage black and white */    
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-118143566.jpg" alt="">
+        <img src="https://thumbs.dreamstime.com/b/running-young-man-beach-sunset-36248494.jpg" alt="" class="img2">
+        <img src="https://tinypng.com/images/social/website.jpg" alt="" class="img3">
+    </div>
+</body>
+</html>

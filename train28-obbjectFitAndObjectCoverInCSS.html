@@ -11,11 +11,14 @@
             border: 2px solid black;
             background-color: aquamarine;
 
-
+            
+            background-position: bottom right; /*fix the image int he bottom right side of the box */
             background-image: url("https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=pexels-pixabay-326055.jpg&fm=jpg");
             /* now the image is a background image for the container instead of an element
             */
-            
+            background-repeat: no-repeat; 
+            /* in cases, when the image is smaller than the box, the image starts, repeating itself, to fill the box, so you can use the background-repeat: no-repeat property to stop repeating the image 
+            */
         }
         img{
             width: 400px;
